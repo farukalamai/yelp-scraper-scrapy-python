@@ -1,4 +1,7 @@
-# C
+# Yelp Restaurant data scraping using python, scrapy spider
+![Top-10-Best-Restaurants-in-San-Francisco-CA-July-2023-Yelp](https://github.com/farukalampro/yelp-webscraper-using-scrapy-python-spider/assets/92469073/e3b0e25f-d55b-44b5-b496-828832240397)
+
+
 ## Deployment
 
 #### 1. Clone Repository 
