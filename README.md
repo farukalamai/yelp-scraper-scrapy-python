@@ -34,7 +34,7 @@
 #### 4. Input your own link from yelp.com
 
  - Go to the **data.py** file. Insert link form yelp
- - I have added one link in data.py as a sample
+ - I have added one link in data.py as a sample. You can insert as many link you want.
 ```bash
       start_urls = [
         # this is the sample url
@@ -44,7 +44,7 @@
 ```
 
 
-#### 4. Run the command in the terminal
+#### 5. Run the command in the terminal
 ```bash
   scrapy crawl data -o sample_file.csv
 ```
@@ -53,4 +53,4 @@
   scrapy crawl "spider name" -o file_name.csv/json/xml
 ``` 
  - Here we have scraped some resturant data which is in **Sample File** folder
-scrapy crawl "spider name" -o file_name.csv/json/xml
+
