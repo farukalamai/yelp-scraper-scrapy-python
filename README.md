@@ -52,5 +52,8 @@
 ```bash
   scrapy crawl "spider name" -o file_name.csv/json/xml
 ``` 
- - Here we have scraped some resturant data which is in **Sample File** folder
+- Here we have scraped some resturant data which is in **Sample File** folder
+
+## Important Note
+ - As Yelp is continuously updating its website, so make sure you are updating **xpath**
 
