@@ -7,10 +7,10 @@
 #### 1. Clone Repository 
 
 ```bash
-  git clone https://github.com/farukalampro/yelp-webscraper-using-scrapy-python-spider.git
+  git clone https://github.com/farukalampro/yelp-webscraper-using-scrapy-python.git
 ```
 ```bash
-  cd yelp-webscraper-using-scrapy-python-spider
+  cd yelp-webscraper-using-scrapy-python
 ```
 #### 2. Create Virtual Environment
 ```bash
@@ -25,7 +25,7 @@
   source env/bin/activate
 ```
 
-#### 3. To install require packages 
+#### 3. To install required packages 
 
 ```bash
   pip install -r requirements.txt
@@ -33,11 +33,11 @@
 
 #### 4. Input your own link from yelp.com
 
- - Go to the **data.py** file. Insert link form yelp
- - I have added one link in data.py as a sample. You can insert as many link you want.
+ - Go to the **data.py** file. Insert link from Yelp
+ - I have added one link in data.py as a sample. You can insert as many links as you want.
 ```bash
       start_urls = [
-        # this is the sample url
+        # This is the sample URL
         # Here you have to put your own search link
         'https://www.yelp.com/search?find_desc=Restaurants&find_loc=San+Francisco%2C+CA' 
     ]
@@ -52,7 +52,7 @@
 ```bash
   scrapy crawl "spider name" -o file_name.csv/json/xml
 ``` 
-- Here we have scraped some resturant data which is in **Sample File** folder
+- Here we have scraped some restaurant data which is in the **Sample File** folder
 
 ## Important Note
  - As Yelp is continuously updating its website, so make sure you are updating **xpath**
