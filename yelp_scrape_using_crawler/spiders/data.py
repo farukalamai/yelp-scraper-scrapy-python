@@ -7,11 +7,14 @@ import requests
 class DataSpider(CrawlSpider):
     name = 'data' 
     allowed_domains = ['yelp.com']
+    
     start_urls = [
-
+        # this is the sample url
+        # Here you have to put your own search link
+        'https://www.yelp.com/search?find_desc=Restaurants&find_loc=San+Francisco%2C+CA' 
     ]
 
-    # For Resturant
+    ## For Resturant
     rules = (
         Rule(LinkExtractor(restrict_xpaths="//div[@class='  padding-t3__09f24__TMrIW padding-r3__09f24__eaF7p padding-b3__09f24__S8R2d padding-l3__09f24__IOjKY border-color--default__09f24__NPAKY']/div/div[2]/div/div/div/div/div/h3/span/a"), callback='parse_item', follow=True),
     )
@@ -104,7 +107,7 @@ class DataSpider(CrawlSpider):
             rating = ''
 
         
-        
+        # Resturant website
         website_href = response.xpath("(//div[@class=' arrange-unit__09f24__rqHTg arrange-unit-fill__09f24__CUubG  border-color--default__09f24__NPAKY']/p[@class=' css-1p9ibgf']/a/@href)[1]").get()
         try:
             website = website_href.split("&")[0].replace("/biz_redir?url=http%3A%2F%2F", "").replace("/biz_redir?url=https%3A%2F%2F", "").replace("%2F", "/").replace("%3F", "/?").replace("%3D", "=").replace("%26", "&").replace(map_with_href, "")
@@ -134,7 +137,7 @@ class DataSpider(CrawlSpider):
         except:
             category_3 = ''
 
-        #New Field
+        # First 3 image scraping
         try:
             image_1 = response.xpath("(//img[@class=' photo-header-media-image__09f24__A1WR_']/@src)[1]").get()
         except:
@@ -148,15 +151,14 @@ class DataSpider(CrawlSpider):
         except:
             image_3 = ''
         
+        # Price range of a resturant
         try:
             price_range = response.xpath("(//span[@class=' css-1ir4e44']/text())[1]").get()
         except:
             price_range = ''
         
-        # resturant_type = response.xpath().get()
 
-
-
+        # Saving data into any format
         yield {
             'Yelp URL': yelp_url,
             'Name': name,
