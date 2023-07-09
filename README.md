@@ -30,7 +30,27 @@
 ```bash
   pip install -r requirements.txt
 ```
-#### 4. Replace your own document in **data** folder
+
+#### 4. Input your own link from yelp.com
+
+ - Go to the **data.py** file. Insert link form yelp
+ - I have added one link in data.py as a sample
+```bash
+      start_urls = [
+        # this is the sample url
+        # Here you have to put your own search link
+        'https://www.yelp.com/search?find_desc=Restaurants&find_loc=San+Francisco%2C+CA' 
+    ]
+```
 
 
+#### 4. Run the command in the terminal
+```bash
+  scrapy crawl data -o sample_file.csv
+```
+ - you can download the data in any format. I have given the format below
+```bash
+  scrapy crawl "spider name" -o file_name.csv/json/xml
+``` 
+ - Here we have scraped some resturant data which is in **Sample File** folder
 scrapy crawl "spider name" -o file_name.csv/json/xml
