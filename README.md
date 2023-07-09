@@ -7,10 +7,10 @@
 #### 1. Clone Repository 
 
 ```bash
-  git clone https://github.com/farukalampro/ai-chatbot-using-Langchain-Pinecone.git
+  git clone https://github.com/farukalampro/yelp-webscraper-using-scrapy-python-spider.git
 ```
 ```bash
-  cd ai-chatbot-using-Langchain-Pinecone
+  cd yelp-webscraper-using-scrapy-python-spider
 ```
 #### 2. Create Virtual Environment
 ```bash
@@ -32,12 +32,5 @@
 ```
 #### 4. Replace your own document in **data** folder
 
-#### 5. Replace your own OpenAI, Pinecone API Key and Pinecone environment in indexing.py, main.py & utils.py
- - [OpenAI API Key](https://platform.openai.com)
- - [Pinecone](app.pinecone.io)
-   - When you are creating the pinecone index make sure, **Dimensions of the index is 384**
- 
-#### 6. Run the web app
-```bash
-  streamlit run main.py
-```
+
+scrapy crawl "spider name" -o file_name.csv/json/xml
